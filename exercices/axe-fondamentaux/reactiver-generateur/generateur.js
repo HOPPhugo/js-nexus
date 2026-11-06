@@ -4,33 +4,33 @@
  * Calcule la quantité d'énergie manquante.
  */
 export function missingEnergy(maxEnergy, currentEnergy) {
-  // TODO
+  return maxEnergy - currentEnergy
 }
 
 /**
  * Calcule le pourcentage d'énergie disponible.
  */
 export function energyPercentage(maxEnergy, currentEnergy) {
-  // TODO
+  return (currentEnergy / maxEnergy) * 100
 }
 
 /**
  * Calcule l'énergie disponible après une recharge.
  */
 export function energyAfterRecharge(currentEnergy, recharge) {
-  // TODO
+  return currentEnergy + recharge
 }
 
 /**
  * Indique si le générateur possède au moins 500 unités d'énergie.
  */
 export function isGeneratorReady(currentEnergy) {
-  // TODO
+  return currentEnergy >= 500 ? true : false
 }
 
 /**
  * Construit le message d'état du générateur.
  */
 export function generatorStatus(name, currentEnergy) {
-  // TODO
+  return `${name} possède ${currentEnergy} unités d'énergie.`
 }
