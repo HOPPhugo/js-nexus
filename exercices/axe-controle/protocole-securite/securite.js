@@ -63,5 +63,17 @@ export function countValidAttempts(text) {
  * Compte les tentatives effectuées jusqu'au troisième `X` ou à la fin.
  */
 export function attemptsBeforeLock(sequence) {
-  // TODO
+  let iterations = 0;
+  let numberOfWrong;
+  for (let char of sequence) {
+    if (char != "X") {
+      numberOfWrong++;
+    }
+    if (numberOfWrong != 3) {
+      iterations++;
+    } else {
+      break;
+    }
+  }
+  return iterations;
 }
