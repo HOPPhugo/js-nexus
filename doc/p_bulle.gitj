@@ -36,5 +36,16 @@
       "source": "author"
     }
   ],
-  "exceptions": []
+  "exceptions": [
+    {
+      "id": "6c1d4fce-87da-45be-bf4f-b6d3d1478209",
+      "type": "commitless",
+      "author": "Hugo Schweizer",
+      "date": "2026-11-06T13:15:00.000Z",
+      "name": "feat(portes-citadelle) : L'effet de ce commit est de régler les problèmes des quatres tests",
+      "description": "",
+      "duration": 45,
+      "status": ""
+    }
+  ]
 }

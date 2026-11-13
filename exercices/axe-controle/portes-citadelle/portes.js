@@ -39,11 +39,11 @@ export function zoneName(code) {
  */
 export function alertLevel(energy) {
   if (energy < 20) 
-  return 'CRITIQUE';
+    return 'CRITIQUE';
   else if (energy < 50) 
-  return 'FAIBLE';
+    return 'FAIBLE';
   else if (energy < 80) 
-  return 'STABLE';
+    return 'STABLE';
   else 
-  return 'OPTIMAL';
+    return 'OPTIMAL';
 }
