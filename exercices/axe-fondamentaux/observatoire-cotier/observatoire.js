@@ -4,21 +4,21 @@
  * Retourne le type JavaScript de la donnée.
  */
 export function dataType(value) {
-  // TODO
+  return typeof value;
 }
 
 /**
  * Indique si le comptage vaut undefined.
  */
 export function isNotTransmitted(count) {
-  // TODO
+  return typeof count == "undefined";
 }
 
 /**
  * Indique si le comptage vaut null.
  */
 export function isOffline(count) {
-  // TODO
+  return count == null && typeof count != "undefined";
 }
 
 /**
@@ -26,7 +26,7 @@ export function isOffline(count) {
  * différent de undefined et de null.
  */
 export function hasBirdCount(count) {
-  // TODO
+  return count != null && typeof count != "undefined";
 }
 
 /**
@@ -34,12 +34,17 @@ export function hasBirdCount(count) {
  * Un comptage indisponible compte pour 0.
  */
 export function totalBirds(northCount, southCount) {
-  // TODO
+  let localNorthCount =
+    northCount != null && typeof northCount != "undefined" ? northCount : 0;
+  let localSouthCount =
+    southCount != null && typeof southCount != "undefined" ? southCount : 0;
+
+  return localNorthCount + localSouthCount;
 }
 
 /**
  * Indique si la hauteur est de type number et n'est pas NaN.
  */
 export function isValidWaveHeight(height) {
-  // TODO
+  return typeof height == "number" && !isNaN(height);
 }
