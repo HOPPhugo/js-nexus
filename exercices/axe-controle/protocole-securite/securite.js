@@ -64,15 +64,14 @@ export function countValidAttempts(text) {
  */
 export function attemptsBeforeLock(sequence) {
   let iterations = 0;
-  let numberOfWrong;
+  let numberOfWrong = 0;
   for (let char of sequence) {
-    if (char != "X") {
+    if (char == "X") {
       numberOfWrong++;
     }
-    if (numberOfWrong != 3) {
-      iterations++;
-    } else {
-      break;
+    iterations++;
+    if (numberOfWrong == 3) {
+      return iterations;
     }
   }
   return iterations;
